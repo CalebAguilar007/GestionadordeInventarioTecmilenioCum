@@ -10,7 +10,7 @@
  */
 package inventariotienda.ui;
 
-import inventariotienda.ui.MenuPrincipal;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

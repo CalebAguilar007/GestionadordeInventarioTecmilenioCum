@@ -9,18 +9,18 @@
  */
 package inventariotienda.ui;
 
+import inventariotienda.ui.InventarioFrame;
 import inventariotienda.model.Producto;
 import inventariotienda.model.Inventario;
 import javax.swing.*;
 import java.awt.*;
 
 public class AgregarProductoFrame extends JFrame {
-
+    private InventarioFrame inventarioFrame;
     private JTextField txtId, txtNombre, txtCantidad, txtPrecio, txtCategoria;
     private JTextField txtLimitePedir, txtLimiteAceptable;
     private JButton btnGuardar, btnCancelar;
 
-    private InventarioFrame inventarioFrame;
 
     public AgregarProductoFrame(InventarioFrame inventarioFrame) {
 
@@ -102,10 +102,8 @@ public class AgregarProductoFrame extends JFrame {
                     limiteAceptable
             );
 
-            // --- conexión correcta ---
             Inventario.agregarProducto(producto);
             inventarioFrame.actualizarTabla();
-            // ---------------------------
 
             JOptionPane.showMessageDialog(this,
                     "Producto guardado correctamente");
@@ -118,5 +116,9 @@ public class AgregarProductoFrame extends JFrame {
                     "Error",
                     JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    Producto getProductoCreado() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

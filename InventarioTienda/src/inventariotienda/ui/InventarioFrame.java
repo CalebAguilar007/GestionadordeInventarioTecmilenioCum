@@ -35,8 +35,9 @@ public class InventarioFrame extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
+        Inventario.cargarDesdeArchivo();
 
-        // --- Crear la tabla ---
+        // Esto es para crear la tabla
         String[] columnas = {"ID", "Nombre", "Cantidad", "Precio", "Categoria", "Estado"};
         modeloTabla = new DefaultTableModel(columnas, 0) {
             @Override

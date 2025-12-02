@@ -27,6 +27,7 @@ public class InventarioFrame extends JFrame {
     private JButton btnEditar;
     private JButton btnEliminar;
     private JButton btnActualizar;
+    private JButton btnMenuPrincipal;
 
     public InventarioFrame() {
         setTitle("Gestión de Inventario");
@@ -56,11 +57,13 @@ public class InventarioFrame extends JFrame {
         btnEditar = new JButton("Editar");
         btnEliminar = new JButton("Eliminar");
         btnActualizar = new JButton("Actualizar");
+        btnMenuPrincipal = new JButton("Menu Principal");
 
         panelBotones.add(btnAgregar);
         panelBotones.add(btnEditar);
         panelBotones.add(btnEliminar);
         panelBotones.add(btnActualizar);
+        panelBotones.add(btnMenuPrincipal);
 
         add(panelBotones, BorderLayout.SOUTH);
 
@@ -69,6 +72,13 @@ public class InventarioFrame extends JFrame {
         btnEditar.addActionListener(e -> editarProducto());
         btnEliminar.addActionListener(e -> eliminarProducto());
         btnActualizar.addActionListener(e -> actualizarTabla());
+        btnMenuPrincipal.addActionListener(e -> {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.setVisible(true);
+            dispose();
+        });
+
+
 
         actualizarTabla();
     }

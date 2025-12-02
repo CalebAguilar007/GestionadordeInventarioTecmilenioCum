@@ -46,6 +46,12 @@ public class Inventario {
     }
 
     public static Producto buscarProductoPorId(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    for (Producto p : productos) {
+        if (p.getId().equals(id)) {
+            return p;
+        }
+    }
+    return null;
     }
 }
+

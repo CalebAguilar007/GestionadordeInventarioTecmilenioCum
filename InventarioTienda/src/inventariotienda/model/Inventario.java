@@ -44,4 +44,8 @@ public class Inventario {
     public static ArrayList<Producto> getProductos() {
         return productos;
     }
+
+    public static Producto buscarProductoPorId(String id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

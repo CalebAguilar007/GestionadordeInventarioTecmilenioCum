@@ -10,39 +10,52 @@
  */
 package inventariotienda.ui;
 
-import inventariotienda.model.Inventario;
 import inventariotienda.model.Producto;
+import inventariotienda.model.Inventario;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.util.List;
 
 public class InventarioFrame extends JFrame {
 
-    private JTable tablaProductos;
-    private JButton btnAgregar, btnEditar, btnEliminar, btnActualizar;
+    private JTable tabla;
+    private DefaultTableModel modeloTabla;
+
+    private JButton btnAgregar;
+    private JButton btnEditar;
+    private JButton btnEliminar;
+    private JButton btnActualizar;
 
     public InventarioFrame() {
-
-        setTitle("Inventario de la Tienda");
-        setSize(800, 400);
+        setTitle("Gestión de Inventario");
+        setSize(800, 500);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Tabla
-        tablaProductos = new JTable();
-        actualizarTabla();
+        // --- Crear la tabla ---
+        String[] columnas = {"ID", "Nombre", "Cantidad", "Precio", "Categoria", "Estado"};
+        modeloTabla = new DefaultTableModel(columnas, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; // esto es para que no puedan editar directamente 
+            }
+        };
 
-        add(new JScrollPane(tablaProductos), BorderLayout.CENTER);
+        tabla = new JTable(modeloTabla);
+        tabla.setAutoCreateRowSorter(true);
 
-        // Botones
+        add(new JScrollPane(tabla), BorderLayout.CENTER);
+
+        // panel de botones
         JPanel panelBotones = new JPanel();
 
         btnAgregar = new JButton("Agregar");
         btnEditar = new JButton("Editar");
         btnEliminar = new JButton("Eliminar");
-        btnActualizar = new JButton("Actualizar Tabla");
+        btnActualizar = new JButton("Actualizar");
 
         panelBotones.add(btnAgregar);
         panelBotones.add(btnEditar);
@@ -51,37 +64,74 @@ public class InventarioFrame extends JFrame {
 
         add(panelBotones, BorderLayout.SOUTH);
 
-        // acciones
-        btnAgregar.addActionListener(e -> abrirAgregarProducto());
+        // Accion de botones
+        btnAgregar.addActionListener(e -> abrirVentanaAgregar());
+        btnEditar.addActionListener(e -> editarProducto());
+        btnEliminar.addActionListener(e -> eliminarProducto());
         btnActualizar.addActionListener(e -> actualizarTabla());
-    
+
+        actualizarTabla();
     }
 
-    private void abrirAgregarProducto() {
-        new AgregarProductoFrame(this).setVisible(true);
+    // botones
+
+    private void abrirVentanaAgregar() {
+        AgregarProductoFrame ventana = new AgregarProductoFrame(this);
+        ventana.setVisible(true);
     }
 
-    // Actualiza la tabla
-    public void actualizarTabla() {
-        String[] columnas = {
-            "ID", "Nombre", "Cantidad", "Precio",
-            "Categoría", "Lim. Pedir", "Lim. Aceptable"
-        };
+    private void editarProducto() {
+        int fila = tabla.getSelectedRow();
 
-        DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-
-        for (Producto p : Inventario.productos) {
-            modelo.addRow(new Object[]{
-                p.getId(),
-                p.getNombre(),
-                p.getCantidad(),
-                p.getPrecio(),
-                p.getCategoria(),
-                p.getLimitePedir(),
-                p.getLimiteAceptable()
-            });
+        if (fila == -1) {
+            JOptionPane.showMessageDialog(this, "Seleccione un producto para editar");
+            return;
         }
 
-        tablaProductos.setModel(modelo);
+        String id = tabla.getValueAt(fila, 0).toString();
+        Producto p = Inventario.buscarProductoPorId(id);
+
+        if (p == null) {
+            JOptionPane.showMessageDialog(this, "producto no existe");
+            return;
+        }
+
+        JOptionPane.showMessageDialog(this,
+                "Función de editar pendiente.");
+    }
+
+    private void eliminarProducto() {
+        int fila = tabla.getSelectedRow();
+
+        if (fila == -1) {
+            JOptionPane.showMessageDialog(this, "Selecciona un producto para eliminar");
+            return;
+        }
+
+        String id = tabla.getValueAt(fila, 0).toString();
+
+        Inventario.eliminarProducto(id);
+        actualizarTabla();
+
+        JOptionPane.showMessageDialog(this, "El Producto fue eliminado");
+    }
+
+    // Actualiza tabla
+
+    public void actualizarTabla() {
+        modeloTabla.setRowCount(0); 
+
+        List<Producto> lista = Inventario.getProductos();
+
+        for (Producto p : lista) {
+            modeloTabla.addRow(new Object[]{
+                    p.getId(),
+                    p.getNombre(),
+                    p.getCantidad(),
+                    p.getPrecio(),
+                    p.getCategoria(),
+                    p.getEstado()
+            });
+        }
     }
 }

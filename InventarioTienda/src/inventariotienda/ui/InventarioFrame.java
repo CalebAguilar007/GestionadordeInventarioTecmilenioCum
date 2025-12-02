@@ -72,7 +72,7 @@ public class InventarioFrame extends JFrame {
         agregarProductoDemo("2", "Coca-Cola 600ml", 3, 15.00, "Bebidas");
 
         // la interaccion con los botones
-        btnAgregar.addActionListener(e -> JOptionPane.showMessageDialog(this, "en produccion"));
+        btnAgregar.addActionListener(e -> {new AgregarProductoFrame(this).setVisible(true);});
         btnEditar.addActionListener(e -> JOptionPane.showMessageDialog(this, "en produccion"));
         btnEliminar.addActionListener(e -> JOptionPane.showMessageDialog(this, "en produccion"));
         btnBuscar.addActionListener(e -> JOptionPane.showMessageDialog(this, "en produccion"));

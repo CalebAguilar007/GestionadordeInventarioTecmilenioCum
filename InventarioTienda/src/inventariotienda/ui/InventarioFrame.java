@@ -94,20 +94,26 @@ public class InventarioFrame extends JFrame {
         int fila = tabla.getSelectedRow();
 
         if (fila == -1) {
-            JOptionPane.showMessageDialog(this, "Seleccione un producto para editar");
+            JOptionPane.showMessageDialog(this,
+                    "Selecciona un producto para editar.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
         String id = tabla.getValueAt(fila, 0).toString();
+
         Producto p = Inventario.buscarProductoPorId(id);
 
         if (p == null) {
-            JOptionPane.showMessageDialog(this, "producto no existe");
+            JOptionPane.showMessageDialog(this,
+                    "No se encontró el producto.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-        JOptionPane.showMessageDialog(this,
-                "Función de editar pendiente.");
+        new EditarProductoFrame(this, p).setVisible(true);
     }
 
     private void eliminarProducto() {

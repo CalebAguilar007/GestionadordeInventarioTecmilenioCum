@@ -63,3 +63,14 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 les agradesco todas contribuciones que gusten realizar, estare esperando con emocion a ver sus ideas divertidas y no olviden que su creatividad no tiene limites.
 
 # Roadmap
+-Road map actual: el Roadmap actual con todos los requerimientos planeados ya fue completado, puede que en el futuro se puedan crear nuevas implementaciones pero de momento ya todo fue terminado, a continuacion mostrare los requerimientos que se implementaron: 
+1.-Crear el login
+2.-Crear la ventana de gestion de inventario
+3.-crear formulario crear producto
+4.-creacion de menu interactuable
+5.-Editar cantidades de inventario
+6.-Crear estado cambiable de inventario (cambia automaticamente)
+7.-crear Archivo de guardado de datos tipo .txt
+
+estas serian todas los requerimientos planeados e implementados de forma correcta dentro del roadmap.
+

@@ -10,3 +10,10 @@
 Capa Visual: dentro se encuentran clases como LoginFrame, MenuPrincipal, InventarioFrame, AgregarProductoFrame y EditarProductoFrame.
 Capa Logica: esta Tiene las dos clases Inventario y Producto.
 Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a una base de datos, decidi hacerlo un poco mas simple y hacerla que tuviera un guardado de datos local a base de un .TXT y aqui es donde entra ese archivo, aqui entra Inventario.txt.
+
+# Requerimientos
+-Servidores: Esta aplicacion en si no utiliza servidores/base de datos, todos se ejecuta localmente (se utiliza un .txt para guardar los datos introducidos).
+
+-Paquetes adicionales: Esta aplicacion utiliza unicamente: Java Swing y IO estandar de Java para los archivos.
+
+-Version de Java: se recomienda Java JDK 17 o Superior.

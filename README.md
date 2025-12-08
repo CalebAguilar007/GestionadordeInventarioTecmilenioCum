@@ -28,3 +28,8 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 1.- una vez hayas instalado el proyecto/aplicacion vas a tener que ejecutar MainClass.java (o darle al boton de run).
 2.-Se tendra que revisar y validar que: el login funcione correctamente, el menu principal se despliegue correctamente, que los datos dentro de Inventario.txt se cargen correctamente, que los botones funciones de manera debida y que el archivo Inventario.txt se actualize despues de cada cabio realizado.
 3.-si todo lo anterios funciona correctamente significa que la aplicacion funciona como se debe (si funcionaba correctamente la ultima vez que lo revise.)
+
+-Implementar solucion en Produccion: bueno siendo totalmente honesto de momento esta aplicacion es solo local por lo que explicare como implementarla en un ambiente local:
+1.-Asegurar que se haya instalado correctamente el JAR para despues poderlo exportar a NetBeans, una vez lo hayas exportado en NetBeans asegurar de darle al boton de Clean and Build (no deberia de mostrar ningun error).
+2.-Asegurar de que en tu carpeta tengas el Jar instalado y El Archivo Inventario.txt (si no me equivoco ya deberia de venir al clonar el repositorio pero en caso de que no si no me equivoco al darle al boton de run si no lo encuentra deberia de crearlo automaticamente.)
+3.-por ultimo Ejecutar el JAR.

@@ -48,6 +48,8 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 5.-el boton de agregar te permite crear nuevos productos, el boton de editar te permite editar nombre,id,precio,cantidad adquirida,entre otros, el boton de acutalizar debe de actualizar la tabla en caso que se realizae algun cambio (algo un poco inecesario ya que casi todo se actualiza inmediatamanete pero ya vere si despues lo retiro o si lo dejo por si acaso) y por ultimo el boton de regresar al menu te regresa al menu con el boton de salir y gestionar inventario.
 6.-Fin de la simulacion.
 
+-referencia para usuario Administrador: El administrados puede hacer diferentes cosas entre ellas pueden, Modificar el archivo Inventario.txt manualmente, cambiar credenciales en la clase LoginFrame para poder poner otro usuario y contrsenia personalisados, Agregar nuevos modulos, entre otros.
+
 # Contribucion
 
 # Roadmap

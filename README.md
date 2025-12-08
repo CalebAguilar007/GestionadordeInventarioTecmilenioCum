@@ -74,3 +74,6 @@ les agradesco todas contribuciones que gusten realizar, estare esperando con emo
 
 estas serian todas los requerimientos planeados e implementados de forma correcta dentro del roadmap.
 
+# Agradecimiento
+Le quiero dar un gran agradecimiento a mi profesor Rey Moisés Vásquez Hernández por haberme apoyado y guiado, durante este periodo de clases y por haberme inspirado a realizar este proyecto que me ayudo tanto en el desarrollo de mis habilidades y tambien le agradesco a todos los que deseen contribuir en el futuro para la mejora de esta aplicacion, espero que tenga un muy bonito dia y me despido.
+Atte: J.Caleb

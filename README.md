@@ -23,3 +23,8 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 1.-Primero Descargar e instalar NetBeans y asegurar de tener Java JDK 17+
 2.-Clonar el repositorio: git clone https://github.com/CalebAguilar007/GestionadordeInventarioTecmilenioCum.git
 3.-Abrir el proyecto en NetBeans.
+
+-Ejecutar Pruebas manualmente: a continuacion mostrare los pasos de como ejecutar pruebas manualmente.
+1.- una vez hayas instalado el proyecto/aplicacion vas a tener que ejecutar MainClass.java (o darle al boton de run).
+2.-Se tendra que revisar y validar que: el login funcione correctamente, el menu principal se despliegue correctamente, que los datos dentro de Inventario.txt se cargen correctamente, que los botones funciones de manera debida y que el archivo Inventario.txt se actualize despues de cada cabio realizado.
+3.-si todo lo anterios funciona correctamente significa que la aplicacion funciona como se debe (si funcionaba correctamente la ultima vez que lo revise.)

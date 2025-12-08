@@ -17,3 +17,9 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 -Paquetes adicionales: Esta aplicacion utiliza unicamente: Java Swing y IO estandar de Java para los archivos.
 
 -Version de Java: se recomienda Java JDK 17 o Superior.
+
+# Instalacion
+-Como instalar el Ambiente de Desarollo?: 
+1.-Primero Descargar e instalar NetBeans y asegurar de tener Java JDK 17+
+2.-Clonar el repositorio: git clone https://github.com/CalebAguilar007/GestionadordeInventarioTecmilenioCum.git
+3.-Abrir el proyecto en NetBeans.

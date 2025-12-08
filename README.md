@@ -40,5 +40,14 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 -Configuracion de requerimientos: El Archivo Inventario.txt debe exisitir dentro del mismo directorio que el JAR y este tiene que tener permisos de lectura y escritura.
 
 # Uso
+-Manual de Usuario Final: a continuacion voy a explicar como un usuario puede utilizar la aplicacion.
+1.-primero abrir la aplicacion.
+2.-Introducir el usuario y contrasena: El usuario predeterminado es Usuario1 y la contrasena es Tienda246
+3.-una vez introducida la contrasena y usuario, el menu principal aparecera con dos opciones Gestionar inventario o salir, salir cierra la aplicacion y el boton de Gestionar inventario te permite ir a la pantalla de gestionar inventario.
+4.-Dentro de Gestionar Inventario podras encontrar una tabla (reorganizable a tu gusto) donde podras almacenar tus productos con cantidades precio y otras informaciones importantes, y en la parte inferior de la aplicacion podras encontrar los botones de agregar, editar, actualizar, borrar y regreasr al menu, cada boton cumple una funcion.
+5.-el boton de agregar te permite crear nuevos productos, el boton de editar te permite editar nombre,id,precio,cantidad adquirida,entre otros, el boton de acutalizar debe de actualizar la tabla en caso que se realizae algun cambio (algo un poco inecesario ya que casi todo se actualiza inmediatamanete pero ya vere si despues lo retiro o si lo dejo por si acaso) y por ultimo el boton de regresar al menu te regresa al menu con el boton de salir y gestionar inventario.
+6.-Fin de la simulacion.
 
 # Contribucion
+
+# Roadmap

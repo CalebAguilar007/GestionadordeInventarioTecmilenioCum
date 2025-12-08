@@ -33,3 +33,12 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 1.-Asegurar que se haya instalado correctamente el JAR para despues poderlo exportar a NetBeans, una vez lo hayas exportado en NetBeans asegurar de darle al boton de Clean and Build (no deberia de mostrar ningun error).
 2.-Asegurar de que en tu carpeta tengas el Jar instalado y El Archivo Inventario.txt (si no me equivoco ya deberia de venir al clonar el repositorio pero en caso de que no si no me equivoco al darle al boton de run si no lo encuentra deberia de crearlo automaticamente.)
 3.-por ultimo Ejecutar el JAR.
+
+# Configuracion
+-Configuracion del Producto: Esta Aplicacion utiliza el Archivo Inventario.txt y dentro de este Archivo se guarda la informacion de cada producto introducido y cada producto tiene que llenar cada linea con informacion las lineas son las siguientes (sin alterar el orden porque se puede acomodar al gusto del usuario.) ID,Nombre,Cantidad,Precio,Categoria,LimitePedir,LimiteAceptable.
+
+-Configuracion de requerimientos: El Archivo Inventario.txt debe exisitir dentro del mismo directorio que el JAR y este tiene que tener permisos de lectura y escritura.
+
+# Uso
+
+# Contribucion

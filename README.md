@@ -51,5 +51,15 @@ Capa de Datos: esta es la ultima capa, es si esta aplicacion no esta vinculada a
 -referencia para usuario Administrador: El administrados puede hacer diferentes cosas entre ellas pueden, Modificar el archivo Inventario.txt manualmente, cambiar credenciales en la clase LoginFrame para poder poner otro usuario y contrsenia personalisados, Agregar nuevos modulos, entre otros.
 
 # Contribucion
+-Como contribuir?: las contribuciones son lo que hacen de esta aplicacion unica y con las capacidades de volverse algo util y bueno para los usuarios, se les agradece a todos los uduarios que gusten contribuir y brindarle de su toque unico a esta aplicacion, a continuacion mostrare como pueden clonar el repositorio y hacer commits para subirlo a un branch (en este caso Dev):
+1.- primero se tiene que clonar el repositorio: git clone https://github.com/CalebAguilar007/GestionadordeInventarioTecmilenioCum.git
+2.-asegurate de abrir tu gitbash dentro de la carpeta del proyecto y ejecutar el comando: git checkout dev (para cambiar a la branch Dev).
+3.-despues de hacer cambios asegurarte de ejecutar el comando: git add .
+4.-Despues utilizar: git commit -m "nueva funcion por implementar que hayas hecho"
+5.-y por ultimo ejecutar el comando: git push origin Dev
+6.-despues dentro del Github puedes tambien crear un pull request para mandar los cambios realizados en Dev para la version Main (la principal).
+7.-Esperar a revision por mi parte para despues acceptar el merge y que los cambios se realizen dentro de la version main.
+
+les agradesco todas contribuciones que gusten realizar, estare esperando con emocion a ver sus ideas divertidas y no olviden que su creatividad no tiene limites.
 
 # Roadmap
